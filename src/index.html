@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sardar Md. Saffat Zabin | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">SZ</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <!-- <li><a href="#research">Research</a></li> -->
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="container hero-content">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hi, I'm</p>
+                    <h1 class="hero-name">Sardar Md. Saffat Zabin</h1>
+                    <p class="hero-title">Software Engineer</p>
+                    <p class="hero-summary">
+                        Building scalable backend services with <span class="highlight">Spring Boot</span>,
+                        <span class="highlight">FastAPI</span>, and <span class="highlight">PostgreSQL</span>.
+                        Experienced in <span class="highlight">LLM systems</span>, <span class="highlight">RAG pipelines</span>,
+                        and <span class="highlight">AI agents</span>. Deploying production systems on
+                        <span class="highlight">AWS</span> using Docker and CI/CD.
+                    </p>
+                    <div class="hero-links">
+                        <a href="mailto:saffatzabin08430843@gmail.com" class="btn btn-primary">Get in Touch</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div>
+                    <div class="hero-social">
+                <a href="https://github.com/saffat-zabin" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/saffat-zabin" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:saffatzabin08430843@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/profile.jpg" alt="Sardar Md. Saffat Zabin">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a Backend Software Engineer from <strong>Dhaka, Bangladesh</strong>, with a
+                        <strong>B.Sc. in Computer Science and Engineering</strong> from
+                        <strong>Bangladesh University of Engineering &amp; Technology (BUET)</strong> (2020&ndash;2025) (CGPA: 3.59).
+                    </p>
+                    <p>
+                        I specialize in designing and building production-grade backend systems&mdash;from
+                        high-throughput REST APIs and asynchronous processing pipelines to
+                        AI-powered retrieval-augmented generation (RAG) services. I care deeply about
+                        writing clean, performant code and shipping absolutely reliable and bulletproof infrastructure.
+                    </p>
+                    <p>
+                        When I'm not coding, I explore the latest in large language models, distributed
+                        systems, and cloud-native architecture. I'm also very fascinated with Computer Architecture and systems
+                        and try to find time to read research papers and articles about DRAM, CPU and GPU architecture.
+                    </p>
+                    <p>
+                        Outside work, I love reading and watching movies and series. Currently I am reading A Game of Thrones and watching The Blacklist series starring James Spader. I also love to travel a lot. I hope to one day travel to all 64 districts of Bangladesh (currently sitting at 14 districts and counting). My dream destinations outside Bangladesh include: Japan, Kashmir, Kazakhstan, Turkmenistan, Turkey, Switzerland, France, Sweden and Italy.
+                    </p>
+                </div>
+                <div class="about-details">
+                    <div class="detail-card">
+                        <span class="detail-label">Location</span>
+                        <span class="detail-value">Dhaka, Bangladesh</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">Education</span>
+                        <span class="detail-value">B.Sc. CSE, BUET</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value"><a href="mailto:saffatzabin08430843@gmail.com">saffatzabin08430843@gmail.com</a></span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="detail-label">Phone</span>
+                        <span class="detail-value">+880 1710 520 808</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <!-- OPlusDojo -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Engineer</h3>
+                                <p class="company">OPlusDojo (Remote) &mdash; Toronto, Canada</p>
+                            </div>
+                            <span class="timeline-date">Sep 2025 &ndash; Feb 2026</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Built an asynchronous document ingestion and <strong>RAG pipeline</strong> using FastAPI, Celery, Redis, S3, and PostgreSQL/pgvector to process uploaded files, extract structured content and embeddings via Gemini, and enable semantic search with LLM-evaluated answer generation.</li>
+                            <li>Built and optimized backend APIs using RDS PostgreSQL + pgvector and S3 presigned URLs; <strong>reduced p95 latency from 1851ms to 490ms (73%)</strong> through endpoint restructuring; implemented JWT-based authentication using AWS Cognito.</li>
+                            <li>Designed and maintained development <strong>CI/CD pipelines</strong> using GitHub Actions for Docker builds, image tagging, and automated deployments to AWS dev environments.</li>
+                            <li>Configured two <strong>Application Load Balancers</strong> (one for API service, one for MCP service) routing behind CloudFront for production traffic handling.</li>
+                            <li>Built internal dashboard views and reusable components in <strong>React + TypeScript</strong> for platform workflows.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>FastAPI</span><span>Celery</span><span>Redis</span><span>PostgreSQL</span>
+                            <span>pgvector</span><span>AWS</span><span>Docker</span><span>React</span>
+                            <span>Gemini</span><span>RAG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apurba Technologies -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Developer (L-1)</h3>
+                                <p class="company">Apurba Technologies Ltd. &mdash; Dhaka, Bangladesh</p>
+                            </div>
+                            <span class="timeline-date">Mar 2025 &ndash; Oct 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Built a <strong>JavaFX desktop tool</strong> to convert legacy ASCII Bangla fonts to Unicode with concurrent processing (ExecutorService), progress tracking, and cancellation.</li>
+                            <li>Extended the tool into a full-stack web platform using <strong>Spring Boot</strong> (backend) and <strong>Angular</strong> (frontend); deployed via Docker Compose on a government server (ocr.bangla.gov.bd).</li>
+                            <li>Designed a configurable <strong>cron-based cleanup scheduler</strong> in Spring Boot, driven by YAML configuration to invalidate and delete temporary OCR files with environment-specific policies.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Spring Boot</span><span>Angular</span><span>JavaFX</span>
+                            <span>Docker Compose</span><span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-scroll-container">
+
+                <!-- Project 1: UrbanNest -->
+                <div class="project-card featured">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <span class="project-badge">Featured</span>
+                    </div>
+                    <h3>UrbanNest: Real Estate Platform</h3>
+                    <p>A full-stack real estate platform with layered Spring Boot backend, React frontend, and robust cloud deployment.</p>
+                    <ul class="project-highlights">
+                        <li>A reimplemecntation of the original UrbanNest project focusing heavily on backend, cloud infrastructure and scalability</li>
+                        <li>Designed layered Spring Boot backend with DTO separation, MapStruct mapping, OpenAPI docs, and Flyway-managed schema evolution on PostgreSQL (AWS RDS).</li>
+                        <li>Implemented dynamic search using JPA Specifications and optimized page queries with @EntityGraph, reducing N+1 queries from <strong>81+ to 2&ndash;3 (97.5% improvement)</strong>.</li>
+                        <li>Built secure auth using Firebase JWT + Spring Security; protected sensitive data with <strong>AES-256-GCM encryption</strong> and SHA-512 hashing.</li>
+                        <li>Integrated <strong>Google Maps Platform</strong> for interactive location selection, reverse geocoding, and nearby place search.</li>
+                        <li>Deployed via Docker &rarr; GitHub Actions &rarr; ECR &rarr; EC2, with Nginx reverse proxy, Let's Encrypt SSL, and monitoring via <strong>Prometheus + Grafana</strong>.</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>AWS</span>
+                        <span>Docker</span><span>Firebase</span><span>Google Maps</span><span>Prometheus</span>
+                        <span>Grafana</span><span>Nginx</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-sm">Live Demo</a>
+                        <a href="#" class="btn btn-sm btn-outline">Backend Repo</a>
+                        <a href="#" class="btn btn-sm btn-outline">Frontend Repo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Urbanest (Academic Version) -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <span class="project-badge">Academic</span>
+                    </div>
+                    <h3>Urbanest: Your Guide to Your Dream Home</h3>
+                    <p>A real estate web application streamlining buying and selling properties in Bangladesh, with an extensive search module, Google Map and Barikoi API integration for location selection, a blogging system, and a review system.</p>
+                    <div class="tech-tags">
+                        <span>Express.js</span><span>React</span><span>Tailwind CSS</span><span>MongoDB</span><span>Google Maps</span><span>Barikoi API</span><span>Figma</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/UrbanNest" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Brain Tumor Classification -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                        <span class="project-badge">ML</span>
+                    </div>
+                    <h3>Brain Tumor Classification using Vision Transformer</h3>
+                    <p>An image processing project leveraging the Vision Transformer architecture to evaluate and improve brain tumor classification over conventional CNN architectures. Implemented <strong>Cross-ViT</strong> (Cross-Attention Multi-Scale Vision Transformer) to classify brain tumors from MR images.</p>
+                    <div class="tech-tags">
+                        <span>Python</span><span>PyTorch</span><span>Vision Transformer</span><span>Cross-ViT</span><span>Image Classification</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-472-Machine-Learning-Project" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://arxiv.org/pdf/2103.14899" class="btn btn-sm btn-outline" target="_blank" rel="noopener">Cross-ViT Paper</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: ML Algorithms from Scratch -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <span class="project-badge">ML</span>
+                    </div>
+                    <h3>Machine Learning Algorithms from Scratch</h3>
+                    <p>Implementations of core ML algorithms from scratch: Logistic Regression, Bagging &amp; Stacking Ensemble Learning, Feed Forward Neural Network, EM Algorithm, and Principal Component Analysis.</p>
+                    <div class="tech-tags">
+                        <span>Python</span><span>NumPy</span><span>Pandas</span><span>Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-472-Machine-Learning-Sessional" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 5: BERT Sentiment Classification -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <span class="project-badge">NLP</span>
+                    </div>
+                    <h3>BERT Sentiment Classification</h3>
+                    <p>An NLP project using the BERT model to classify sentiments from tweets published during the Covid-19 pandemic. Utilizes BERT Tokenizer and BERT Sequence Classifier for fine-tuned sentiment analysis.</p>
+                    <div class="tech-tags">
+                        <span>Python</span><span>PyTorch</span><span>BERT</span><span>gensim</span><span>NLP</span><span>Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/BERT-Sentiment-Classification" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Computer Security -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span class="project-badge">Security</span>
+                    </div>
+                    <h3>Computer Security</h3>
+                    <p>Implemented core cryptographic and security concepts including AES encryption/decryption, Diffie-Hellman key exchange, and explored web security vulnerabilities such as XSS and Buffer Overflow attacks.</p>
+                    <div class="tech-tags">
+                        <span>Python</span><span>AES</span><span>Diffie-Hellman</span><span>XSS</span><span>Buffer Overflow</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-406-Computer-Security-Sessional" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Find Me A Doctor -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        <span class="project-badge">System Design</span>
+                    </div>
+                    <h3>Find Me A Doctor</h3>
+                    <p>Designed a comprehensive online doctor appointment and telemedicine system. Created detailed system design documentation including use case diagrams, activity diagrams, class diagrams, and sequence diagrams.</p>
+                    <div class="tech-tags">
+                        <span>System Design</span><span>BPMN Design</span><span>Class Diagram</span><span>ER Diagram</span><span>Collaboration Diagram</span><span>Sequence Diagram</span><span>State Diagram</span><span>UML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-326-Information-System-Design-Sessional-" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 8: Operating System -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <span class="project-badge">OS</span>
+                    </div>
+                    <h3>Operating System (xv6)</h3>
+                    <p>Enhanced the xv6 operating system with system call tracing, inter-process communication, memory management with paging, thread library implementation including mutex and conditional variables, and various scheduling algorithms.</p>
+                    <div class="tech-tags">
+                        <span>C</span><span>Bash</span><span>xv6</span><span>Paging</span><span>Threading</span><span>Scheduling</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-314-Operating-System-Sessional" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 9: Computer Networks -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <span class="project-badge">Networks</span>
+                    </div>
+                    <h3>Computer Networks</h3>
+                    <p>Built networking projects including HTTP server with socket programming, file server with upload/download, NS3 network simulations, and a TCP congestion control implementation based on TCP-Reno.</p>
+                    <div class="tech-tags">
+                        <span>C++</span><span>Java</span><span>Socket Programming</span><span>NS3</span><span>TCP-Reno</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-322-Computer-Networks-Sessional" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 10: Computer Architecture -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                        <span class="project-badge">Hardware</span>
+                    </div>
+                    <h3>Computer Architecture</h3>
+                    <p>Designed a 32-bit IEEE 754 floating-point adder and a 4-bit MIPS processor in Logisim, implementing core computer architecture concepts at the hardware level.</p>
+                    <div class="tech-tags">
+                        <span>Logisim</span><span>MIPS</span><span>IEEE 754</span><span>Digital Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-306-Computer-Architecture-Sessional" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 11: Maguire in the Middle -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <span class="project-badge">Embedded</span>
+                    </div>
+                    <h3>Maguire in the Middle</h3>
+                    <p>A micro-controller based game built on the ATMega32A platform using an 8x8 LED dot matrix display. Players navigate through obstacles in this embedded systems project combining hardware interfacing with game logic.</p>
+                    <div class="tech-tags">
+                        <span>ATMega32A</span><span>LED Matrix</span><span>Embedded C</span><span>Micro-controller</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/Maguire-in-the-Middle" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 12: AI Sessional -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        <span class="project-badge">AI</span>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Implemented classical AI algorithms including A* search for the N-puzzle problem, adversarial search with alpha-beta pruning for Mancala, and a Decision Tree classifier built from scratch.</p>
+                    <div class="tech-tags">
+                        <span>C++</span><span>A* Search</span><span>Alpha-Beta Pruning</span><span>Decision Tree</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-318-Artificial-Intelligence-Sessional-" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 13: C Compiler -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <span class="project-badge">Compiler</span>
+                    </div>
+                    <h3>C Compiler</h3>
+                    <p>Built an incremental compiler for a subset of the C programming language, progressing through lexical analysis, syntax/semantic analysis, intermediate code generation, and assembly code generation for 8086.</p>
+                    <div class="tech-tags">
+                        <span>C</span><span>Flex</span><span>Bison</span><span>8086 Assembly</span><span>Compiler Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/CSE-310-Compiler-Sessional" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 14: Shikho Online Learning Platform -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <span class="project-badge">Web App</span>
+                    </div>
+                    <h3>Shikho: Online Learning Platform</h3>
+                    <p>A Coursera-inspired online learning platform where students can enroll in courses with video content and quizzes, and instructors can create and manage courses. Built with server-side rendering.</p>
+                    <ul class="project-highlights">
+                        <li>Responsible for the complete backend design in <strong>Node.js</strong> and database implementation in <strong>OracleDB</strong>.</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span>Node.js</span><span>EJS</span><span>OracleDB</span><span>Express</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/2-2-DB-Project" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 15: Litol Football Manager -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        <span class="project-badge">Game</span>
+                    </div>
+                    <h3>Litol Football Manager</h3>
+                    <p>A football manager simulation game with real-time multiplayer support. Features include team management, player transfers, and match simulations with networking capabilities for online play.</p>
+                    <div class="tech-tags">
+                        <span>JavaFX</span><span>Java Networking</span><span>Threading</span><span>Game Dev</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaffatZabin-17/1-2-Java-Fx-Project" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">Java</span>
+                        <span class="skill-chip">C/C++</span>
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">TypeScript</span>
+                        <span class="skill-chip">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">Spring Boot</span>
+                        <span class="skill-chip">FastAPI</span>
+                        <span class="skill-chip">Celery</span>
+                        <span class="skill-chip">React</span>
+                        <span class="skill-chip">Node.js</span>
+                        <span class="skill-chip">Express.js</span>
+                        <span class="skill-chip">JavaFX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">PostgreSQL</span>
+                        <span class="skill-chip">pgvector</span>
+                        <span class="skill-chip">OracleDB</span>
+                        <span class="skill-chip">MySQL</span>
+                        <span class="skill-chip">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">AWS (Cognito, EC2, RDS, S3, CloudFront, ECR, ACM)</span>
+                        <span class="skill-chip">Google Maps Platform</span>
+                        <span class="skill-chip">Nginx</span>
+                        <span class="skill-chip">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Observability</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">Docker</span>
+                        <span class="skill-chip">Docker Compose</span>
+                        <span class="skill-chip">GitHub Actions</span>
+                        <span class="skill-chip">Prometheus</span>
+                        <span class="skill-chip">Grafana</span>
+                        <span class="skill-chip">Micrometer</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI / LLM</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">LangChain</span>
+                        <span class="skill-chip">LangGraph</span>
+                        <span class="skill-chip">Gemini API</span>
+                        <span class="skill-chip">RAG Pipelines</span>
+                        <span class="skill-chip">AI Agents</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML Frameworks</h3>
+                    <div class="skill-items">
+                        <span class="skill-chip">PyTorch</span>
+                        <span class="skill-chip">Pandas</span>
+                        <span class="skill-chip">NumPy</span>
+                        <span class="skill-chip">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section" id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-list">
+                <div class="publication-card">
+                    <div class="publication-venue">
+                        <span class="venue-badge">CHI 2025</span>
+                        <span class="venue-type">ACM Conference</span>
+                    </div>
+                    <h3><a href="https://dl.acm.org/doi/full/10.1145/3706599.3719895" target="_blank" rel="noopener">Beyond the Blackout: Qualitative Insights and Sentiment Analysis on the Impact, Adaptation, and Design Solutions During the Internet Shutdown in Bangladesh</a></h3>
+                    <p class="publication-authors"><strong>Farhan Tahmidul Karim*</strong>, <strong>Sardar Md. Saffat Zabin*</strong>, Ishika Tarin, Novia Nurain, A. B. M. Alim Al Islam</p>
+                    <p class="publication-note">* Equal contribution (co-first authors)</p>
+                    <p class="publication-abstract">The recent period of Internet restriction in Bangladesh, which occurred from July 14 to August 5 during the anti-discrimination student movement, had a significant impact on individuals' lives. This study aims to know how their communication, information access, and daily activities were affected and how they used to cope with that, again what were their expectations from social media and communication tools. Through interviews with 15 individuals from diverse demographics, supported by qualitative analysis and sentiment analysis, the findings provide valuable insights into the challenges faced, experiences shared, and recommendations offered by participants. Based on these findings, we propose design implications to develop a robust digital infrastructure capable of addressing similar challenges in future scenarios.</p>
+                    <div class="publication-links">
+                        <a href="https://dl.acm.org/doi/full/10.1145/3706599.3719895" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Read Paper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I'm Learning Section -->
+    <section class="section section-alt" id="learning">
+        <div class="container">
+            <h2 class="section-title">What I'm Learning Right Now</h2>
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <div class="learning-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    </div>
+                    <h3>Advanced LLM Engineering</h3>
+                    <p>Deep-diving into agentic AI systems, multi-step reasoning, tool use patterns, and building production-grade LLM applications with LangChain, LangGraph and custom agent architectures.</p>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    </div>
+                    <h3>Distributed Systems</h3>
+                    <p>Studying distributed consensus, event-driven architecture (Kafka), microservice patterns, and building highly available systems at scale.</p>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <h3>Cloud-Native Architecture</h3>
+                    <p>Exploring Kubernetes, infrastructure-as-code with Terraform, serverless patterns on AWS, and advanced container orchestration strategies.</p>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h3>System Design</h3>
+                    <p>Practicing end-to-end system design for real-world applications: load balancing strategies, caching layers, database sharding, and designing for fault tolerance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Goals Section (commented out for now)
+    <section class="section" id="research">
+        <div class="container">
+            <h2 class="section-title">Research Goals</h2>
+            <div class="research-content">
+                <div class="research-statement">
+                    <p class="research-quote">
+                        "I'm interested in the intersection of <strong>large language models</strong> and
+                        <strong>scalable systems engineering</strong>&mdash;building AI-powered backends that
+                        are not just intelligent, but reliable, efficient, and production-ready."
+                    </p>
+                </div>
+                <div class="research-areas">
+                    <div class="research-area">
+                        <h3>Retrieval-Augmented Generation (RAG)</h3>
+                        <p>Exploring advanced RAG architectures: hybrid search strategies, re-ranking models, chunk optimization, and evaluation frameworks for measuring retrieval quality in domain-specific applications.</p>
+                    </div>
+                    <div class="research-area">
+                        <h3>AI Agent Systems</h3>
+                        <p>Investigating multi-agent collaboration, tool-use reasoning, planning under uncertainty, and building autonomous agents that can reliably solve complex, multi-step tasks.</p>
+                    </div>
+                    <div class="research-area">
+                        <h3>Efficient LLM Serving</h3>
+                        <p>Studying optimization techniques for LLM inference at scale: batching strategies, KV-cache management, quantization, and building low-latency serving infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- CV Section -->
+    <section class="section section-alt" id="cv">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="cv-section">
+                <div class="cv-viewer">
+                    <iframe src="assets/Sardar_Md_Saffat_Zabin_CV.pdf" title="Sardar Md. Saffat Zabin - CV"></iframe>
+                </div>
+                <div class="cv-actions">
+                    <a href="assets/Sardar_Md_Saffat_Zabin_CV.pdf" class="btn btn-primary" download>Download CV</a>
+                    <a href="assets/Sardar_Md_Saffat_Zabin_CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">Open in New Tab</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out!</p>
+                <div class="contact-grid">
+                    <a href="mailto:saffatzabin08430843@gmail.com" class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">saffatzabin08430843@gmail.com</span>
+                    </a>
+                    <a href="tel:+8801710520808" class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+880 1710 520 808</span>
+                    </a>
+                    <a href="https://github.com/saffat-zabin" target="_blank" rel="noopener" class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/saffat-zabin</span>
+                    </a>
+                    <a href="https://linkedin.com/in/saffat-zabin" target="_blank" rel="noopener" class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/saffat-zabin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sardar Md. Saffat Zabin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
