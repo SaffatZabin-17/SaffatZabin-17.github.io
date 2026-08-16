@@ -84,7 +84,7 @@ sections.forEach(section => observer.observe(section));
 
 // ===== Fade-in animation on scroll =====
 const fadeElements = document.querySelectorAll(
-    '.timeline-item, .project-card, .skill-category, .learning-card, .research-area, .contact-card, .detail-card, .about-text, .cv-section, .publications-placeholder, .research-statement'
+    '.timeline-item, .project-card, .skill-category, .learning-card, .research-area, .contact-card, .detail-card, .about-text, .cv-section, .publication-card, .reference-card, .looking-for-card, .research-statement'
 );
 
 fadeElements.forEach(el => el.classList.add('fade-in'));
