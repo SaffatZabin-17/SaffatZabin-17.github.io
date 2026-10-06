@@ -1,40 +1,12 @@
 // ===== Theme Toggle =====
+// The page follows the system theme (CSS color-scheme); the toggle overrides it for this visit only.
 const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;
 
-function getSystemTheme() {
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-}
-
-function getEffectiveTheme() {
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved;
-    return getSystemTheme();
-}
-
-function applyTheme(theme) {
-    if (theme === getSystemTheme() && !localStorage.getItem('theme')) {
-        root.removeAttribute('data-theme');
-    } else {
-        root.setAttribute('data-theme', theme);
-    }
-}
-
-// Apply on load
-applyTheme(getEffectiveTheme());
-
 themeToggle.addEventListener('click', () => {
-    const current = getEffectiveTheme();
-    const next = current === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
-    root.setAttribute('data-theme', next);
-});
-
-// Listen for system theme changes
-window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
-    if (!localStorage.getItem('theme')) {
-        root.removeAttribute('data-theme');
-    }
+    const current = root.dataset.theme
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    root.dataset.theme = current === 'dark' ? 'light' : 'dark';
 });
 
 // ===== Navbar scroll effect =====
@@ -84,7 +56,7 @@ sections.forEach(section => observer.observe(section));
 
 // ===== Fade-in animation on scroll =====
 const fadeElements = document.querySelectorAll(
-    '.stats, .prose, .facts, .job, .featured, .project, .skill-row, .pub'
+    '.prose, .facts, .job, .featured, .project, .skill-row, .pub'
 );
 
 fadeElements.forEach(el => el.classList.add('fade-in'));

@@ -12,8 +12,9 @@
     --chip: light-dark(#f4f4f5, #1b1b1f);
     --nav-bg: light-dark(rgb(250 250 250 / 0.82), rgb(10 10 11 / 0.82));
 
-    --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-serif: 'Newsreader', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     --radius: 12px;
     --ease: 0.2s ease;
 }
@@ -153,10 +154,11 @@ strong { font-weight: 600; color: var(--fg); }
 @keyframes ping { 70%, 100% { box-shadow: 0 0 0 6px rgb(34 197 94 / 0); } }
 
 .hero-name {
-    font-size: clamp(2.25rem, 5.5vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.035em;
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
 }
 .hero-title { margin-top: 12px; font-size: 1.2rem; font-weight: 500; color: var(--accent); }
 .hero-summary { margin-top: 20px; max-width: 58ch; font-size: 1.075rem; color: var(--muted); }
@@ -175,19 +177,6 @@ strong { font-weight: 600; color: var(--fg); }
     border: 1px solid var(--border);
 }
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 72px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-}
-.stat { padding: 24px; }
-.stat + .stat { border-left: 1px solid var(--border); }
-.stat dt { font: 500 0.75rem var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--subtle); }
-.stat dd { font-size: 0.875rem; color: var(--muted); }
-.stat-value { display: block; margin: 6px 0 2px; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.02em; color: var(--fg); }
 
 /* ===== Sections ===== */
 .section { padding: 88px 0; border-top: 1px solid var(--border); }
@@ -197,9 +186,10 @@ strong { font-weight: 600; color: var(--fg); }
     align-items: baseline;
     gap: 12px;
     margin-bottom: 40px;
-    font-size: 1.6rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 .section-title span { font: 500 0.85rem var(--font-mono); color: var(--accent); }
 
@@ -262,7 +252,7 @@ strong { font-weight: 600; color: var(--fg); }
     background: var(--surface);
     box-shadow: inset 0 2px 0 var(--accent);
 }
-.featured h3 { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 10px; }
+.featured h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 500; margin-bottom: 10px; }
 .featured .tags { margin: 20px 0; }
 .featured .bullets { font-size: 0.95rem; }
 
@@ -283,7 +273,7 @@ strong { font-weight: 600; color: var(--fg); }
     transition: border-color var(--ease), transform var(--ease);
 }
 .project:hover { border-color: var(--subtle); transform: translateY(-2px); }
-.project .eyebrow { margin: 0; }
+.project .eyebrow { margin: 0; font-size: 0.75rem; color: var(--subtle); }
 .project h3 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; }
 .project p { font-size: 0.92rem; color: var(--muted); }
 .project .tags { margin-top: auto; padding-top: 6px; }
@@ -315,7 +305,7 @@ strong { font-weight: 600; color: var(--fg); }
 .pub p { font-size: 0.95rem; }
 
 /* ===== Contact ===== */
-.contact-heading { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 28px; }
+.contact-heading { font-family: var(--font-serif); font-size: clamp(2rem, 4.5vw, 2.75rem); font-weight: 500; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 28px; }
 .contact .lead { margin: 0; }
 .contact .hero-links { margin: 28px 0; }
 
@@ -359,8 +349,6 @@ strong { font-weight: 600; color: var(--fg); }
     .hero { padding-top: 112px; }
     .hero-layout { grid-template-columns: 1fr; gap: 28px; }
     .hero-photo { order: -1; width: 112px; height: 112px; border-radius: 16px; }
-    .stats { grid-template-columns: 1fr; margin-top: 48px; }
-    .stat + .stat { border-left: 0; border-top: 1px solid var(--border); }
     .section { padding: 64px 0; }
     .featured { padding: 24px; }
     .pub { grid-template-columns: 1fr; gap: 10px; }
