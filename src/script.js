@@ -19,17 +19,13 @@ window.addEventListener('scroll', () => {
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    navToggle.classList.toggle('active');
-});
+const setNavOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open);
+};
 
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('active');
-    });
-});
+navToggle.addEventListener('click', () => setNavOpen(!navLinks.classList.contains('open')));
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setNavOpen(false)));
 
 // ===== Active nav link on scroll =====
 const sections = document.querySelectorAll('.section, .hero');
@@ -53,25 +49,3 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
-
-// ===== Fade-in animation on scroll =====
-const fadeElements = document.querySelectorAll(
-    '.prose, .facts, .job, .featured, .project, .skill-row, .pub'
-);
-
-fadeElements.forEach(el => el.classList.add('fade-in'));
-
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            fadeObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    root: null,
-    rootMargin: '0px 0px -60px 0px',
-    threshold: 0.1
-});
-
-fadeElements.forEach(el => fadeObserver.observe(el));
